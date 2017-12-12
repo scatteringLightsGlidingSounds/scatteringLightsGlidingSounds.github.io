@@ -1,5 +1,5 @@
 var lightParticles = [];
-var numberOfParticles = 500;
+var numberOfParticles = 800;
 var sitemap;
 var poleLights = [];
 var flowerBedLights = [];
@@ -53,7 +53,7 @@ function setup() {
 	// generate particles to random position 
 	for(var i=0; i<numberOfParticles; i++){
 		var tPos = createVector(random(width), random(height));
-		lightParticles.push(new LightParticle(tPos, 1, 0.1));
+		lightParticles.push(new LightParticle(tPos, random(0.5, 0.9), random(0.1, 0.2)));
 	}
 	print(poleLights.length);
 	gr = createVector(0, 2);
