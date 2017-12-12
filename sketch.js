@@ -53,7 +53,7 @@ function setup() {
 	// generate particles to random position 
 	for(var i=0; i<numberOfParticles; i++){
 		var tPos = createVector(random(width), random(height));
-		lightParticles.push(new LightParticle(tPos, random(0.5, 1.0), random(0.2, 0.4)));
+		lightParticles.push(new LightParticle(tPos, random(0.3, 1.0), random(0.2, 0.5)));
 	}
 	print(poleLights.length);
 	gr = createVector(0, 2);
