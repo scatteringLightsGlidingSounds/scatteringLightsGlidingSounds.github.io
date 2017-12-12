@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Iosevka';
+    src: url('https://cdn.rawgit.com/kaushalmodi/iosevka-mirror/v1.13.2/woff2/iosevka-ss08-regular.woff2') format('woff2'),
+         url('https://cdn.rawgit.com/kaushalmodi/iosevka-mirror/v1.13.2/woff/iosevka-ss08-regular.woff') format('woff');
+}
+
 html, body{
     margin:0;
     padding:0;
+    font-family: 'Iosevka';
     /*overflow:hidden;*/
     background:#000;
     overflow-x: hidden;
@@ -8,12 +15,13 @@ html, body{
 
 #container{
     width:1920px;
-    margin:0 auto;
+    margin:20px auto 0 auto;
 }
 
 
 #p5Container {
-    postion:fixed;
+    position:fixed;
+    /*display:block;*/
     top:0;
     left:0; 
     width:1920px;
@@ -21,13 +29,43 @@ html, body{
     z-index:-1;
 }
 
+#containerHeader{
+    color:#FFF;
+    letter-spacing:-0.1em;
+    position:absolute;
+    top:480px;
+    left:150px;
+    font-size:120px;
+    z-index:3;
+}
+
+
 #articleHeader{
-    position:relative;
+    position:fixed;
     display:block;
+    top:840px;
     margin-top:-100px;
     width:1920px;
     height:200px;
     background-image:url('./data/images/gr.png');
     background-repeat: repeat-x;
     z-index:4;
+}
+
+
+
+#articleBody{
+    position: absolute;
+    margin-top: -100px;
+    /*display: block;*/
+    font-size: 40px;
+    padding: 0 150px 700px 150px;
+    color: #FFF;
+    z-index: 4;
+    top: 840px;
+}
+
+.wrapping{
+    background:#000;
+    margin-top:30px;
 }
