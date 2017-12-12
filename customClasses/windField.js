@@ -38,7 +38,7 @@ function WindField(r) {
 	this.init();
 
 	// Draw every vector
-	this.display = function() {
+	this.update = function() {
 		this.windAngle += (this.targetWindAngle - this.windAngle) * 0.01;
 		this.init();
 		// for (var i = 0; i < this.cols; i++) {
@@ -50,7 +50,6 @@ function WindField(r) {
 
 	this.setAngle = function(angle) {
 		this.targetWindAngle = angle;
-
 		print("setted : " + this.windAngle);
 	}
 

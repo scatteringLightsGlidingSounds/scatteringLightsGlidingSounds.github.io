@@ -22,7 +22,7 @@ function setup() {
 	canvas.parent('p5Container');
 	// print(poleLightJSON.poles.length);
 
-	windField = new WindField(105);
+	windField = new WindField(50);
 	windField.setAngle(random(180, 360));	
 	lastAngleUpdatedTimer = millis();
 
@@ -53,7 +53,7 @@ function setup() {
 	// generate particles to random position 
 	for(var i=0; i<numberOfParticles; i++){
 		var tPos = createVector(random(width), random(height));
-		lightParticles.push(new LightParticle(tPos, random(0.5, 0.9), random(0.1, 0.2)));
+		lightParticles.push(new LightParticle(tPos, random(0.5, 1.0), random(0.2, 0.4)));
 	}
 	print(poleLights.length);
 	gr = createVector(0, 2);
@@ -61,9 +61,11 @@ function setup() {
 
 function draw() {
 	image(sitemap, 0, 0);
+	windField.update();
 
-	if (millis() - lastAngleUpdatedTimer > 30 * 1000) {
-		windField.setAngle(random(180, 360));
+	if (millis() - lastAngleUpdatedTimer > 10 * 1000) {
+		windField.setAngle(random(180, 270));
+		print("wind changed!");
 		lastAngleUpdatedTimer = millis();
 	}
 
@@ -100,7 +102,7 @@ function draw() {
 
 	push();
 	fill(255);
-	text(frameRate(), mouseX, mouseY);
+	text(windField.windAngle, mouseX, mouseY);
 	pop();
 }
 

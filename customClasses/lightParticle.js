@@ -1,7 +1,7 @@
 /**************************** LightParticle Class *********************** */
 function LightParticle(pos, ms, mf){
-    this.maxSpeed = ms || 1;
-    this.maxForce = mf || 0.1;
+    this.maxSpeed = ms;
+    this.maxForce = mf;
 
     this.pos = pos;
 	this.acc = createVector(0,0);
