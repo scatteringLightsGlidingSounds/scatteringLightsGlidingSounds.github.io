@@ -2,6 +2,8 @@
 <html lang="ko">
 	<head>
 		<title>Signal Lights Connected :: Scattering Lights</title>
+		<meta charset="UTF-8">
+		<meta authors = "Yi donghoon">
 		<meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
@@ -10,31 +12,39 @@
 		<script src="./customClasses/lightParticle.js"></script>  <!-- particle -->
 		<script src="./customClasses/light.js"></script>  <!-- particle -->
 		<script src="./customClasses/windField.js"></script>  <!-- particle -->
+		<script src="./customClasses/OscilMonitor.js"></script>  <!-- particle -->
 		<script src="sketch.js"></script>
 	</head>
 	<body>
 		<div id="container">
 			<div id="containerHeader">
-				<p>SCATTERING LIGHTS</p>
+				<span class="mainTitle">SCATTERING LIGHT</span><br/>
+				<span class="subTitle">흩어지는 빛</span>
 			</div>
 			<div id="p5Container"></div>
 			<div id="articleHeader"></div>
-			<div id="articleBody">
-				<p><span class="wrapping">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada bibendum arcu vitae elementum. Ut lectus arcu bibendum at. Diam quis enim lobortis scelerisque fermentum dui faucibus. Aliquam nulla facilisi cras fermentum odio. Mauris pharetra et ultrices neque ornare aenean euismod. Velit scelerisque in dictum non consectetur. Nibh ipsum consequat nisl vel pretium. Eu mi bibendum neque egestas congue quisque egestas diam. Volutpat blandit aliquam etiam erat velit scelerisque in. Suspendisse sed nisi lacus sed. Fermentum leo vel orci porta non pulvinar neque laoreet. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Parturient montes nascetur ridiculus mus mauris. </span></p>
+			<div id="articleBodyHalf">
+				<p><span class="wrappingKR">
+				'흩어지는 빛, 미끄러지는 소리'는 온도, 풍향, 풍속, 습도 등 서울과 평창의 날씨 정보를 빛과 소리의 신호로 치환해 보행자들이 공감각적 경험을 통해 자연의 아름다움을 느끼게 해준다. 바레인 작가 핫산 후자이리, 김다움, 이동훈이 참여했다. </span></p>
+			</div>
+			<div id="articleBodyFull">
+				<p><span class="wrappingKR">
+				서울로에는 111개의 기둥조명과 700여개가 넘는 화분조명이 있다. 이들 중, 기둥조명과 다르게 화분조명의 경우 갯수가 많아 아쉽게도 개별제어가 불가능하지 않아, 3개에서 많게는 7개정도를 묶어서 제어가 가능했다. 
+				</span></p>
 
-				<p><span class="wrapping">
-				Dapibus ultrices in iaculis nunc sed. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Sed sed risus pretium quam vulputate dignissim suspendisse in est. Ultricies leo integer malesuada nunc vel. Auctor eu augue ut lectus arcu bibendum. Egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Non arcu risus quis varius. Aliquam vestibulum morbi blandit cursus risus at ultrices. Malesuada pellentesque elit eget gravida. Est ultricies integer quis auctor elit sed vulputate mi. Adipiscing tristique risus nec feugiat in fermentum. Massa tempor nec feugiat nisl pretium fusce id velit ut. Velit sed ullamcorper morbi tincidunt ornare massa. Nunc sed blandit libero volutpat sed cras ornare. Scelerisque felis imperdiet proin fermentum. Nam aliquam sem et tortor consequat id.</span></p>
+				<p><span class="wrappingKR">
+				본격적인 작업에 앞서, 조명이 동작할 때, 어떠한 패턴으로 제어를 할것인지를 큰 틀에서 모니터링 할 수 있어야 했다. 이를 위해, 서울로의 전체 조명의 위치를 가늠할 수 있는 방법을 고민해야 했는데, 서울로의 도면에서 각 조명의 아이디와, 위치를 2차원 평면에 매핑하고, 이것들을 프로그램에서 불러올 수 있는 json 파일의 형태로 정리하여 연동되도록 하였다. 서울로의 고가는 그 모양을 벡터파일로 다듬어 추출한 뒤 이미지파일로 변환하여 사용할 수 있게 하였다.
+				또한, 조명을 제어하기 위해 사용되는 컨트롤ID도 함께 사용될 수 있다.
+				</span></p>
 
-				<p><span class="wrapping">
-				Faucibus nisl tincidunt eget nullam non. Fames ac turpis egestas integer eget. Id volutpat lacus laoreet non curabitur gravida arcu. Quis risus sed vulputate odio ut enim blandit volutpat. Commodo ullamcorper a lacus vestibulum. Arcu non odio euismod lacinia at quis risus sed. Scelerisque in dictum non consectetur a erat nam. Faucibus vitae aliquet nec ullamcorper sit amet risus. Velit scelerisque in dictum non consectetur. Bibendum neque egestas congue quisque egestas diam in arcu cursus. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Lacus vel facilisis volutpat est velit egestas dui id. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Pellentesque id nibh tortor id aliquet lectus proin nibh. At consectetur lorem donec massa sapien faucibus. A condimentum vitae sapien pellentesque habitant morbi tristique senectus. Viverra nibh cras pulvinar mattis nunc sed.</span></p>
+				<div style="height:400px;"></div>
+				<p><span class="wrappingKR">
+				화분조명의 제어를 위해서는 다른식의 접근방법을 고민해야 했는데, 함께 플레이되는 사운드 미디어에서 아이디어를 얻어왔다. 자연적인 신호, 특히 소리라는 것은 결국 순수한 사인파형이 합성된 신호이다. 이에 착안하여, 서울과 평창 두 위치에서 수집되는 온도 및 습도, 강수량등의 정보를 사인파형을 구성하는 주파수, 위상, 크기등의 파라메터로 대입하여, 두개의 사인파를 만든다음, 이를 합성하여 시시각각 변하는 연속적인 일종의 wave파형을 만들어내었다. 이 wave파형은 화분조명그룹의 갯수에 따라 고르게 간격을 유지하고, 이를 기반으로 샘플링되어, 최종적으로는 각 그룹의 밝기로 변환된다.
+				</span></p>
 
-				<p><span class="wrapping">
-				Tortor id aliquet lectus proin nibh nisl condimentum. Sed vulputate odio ut enim blandit volutpat maecenas. Elit eget gravida cum sociis. Rutrum tellus pellentesque eu tincidunt. Imperdiet sed euismod nisi porta lorem mollis. Id faucibus nisl tincidunt eget. Pellentesque habitant morbi tristique senectus. Eget sit amet tellus cras adipiscing. Amet mattis vulputate enim nulla. Leo vel orci porta non pulvinar neque laoreet suspendisse. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Amet est placerat in egestas erat imperdiet sed. Eget mi proin sed libero enim sed faucibus turpis.</span></p>
+				<!--<p><span class="wrapping">Pellentesque sit amet porttitor eget. Ante in nibh mauris cursus mattis. Eget duis at tellus at urna condimentum mattis pellentesque id. Egestas tellus rutrum tellus pellentesque. Amet luctus venenatis lectus magna fringilla urna porttitor. Mi sit amet mauris commodo. Nibh sed pulvinar proin gravida hendrerit lectus a. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Amet aliquam id diam maecenas ultricies. Consectetur purus ut faucibus pulvinar. Ultricies tristique nulla aliquet enim. Id leo in vitae turpis massa sed elementum tempus. Varius quam quisque id diam vel quam elementum. Hendrerit gravida rutrum quisque non tellus orci. In ante metus dictum at. Purus sit amet luctus venenatis lectus magna fringilla. Ut sem viverra aliquet eget sit amet. Ac tincidunt vitae semper quis lectus. Congue quisque egestas diam in arcu.</span></p>
 
-				<p><span class="wrapping">Pellentesque sit amet porttitor eget. Ante in nibh mauris cursus mattis. Eget duis at tellus at urna condimentum mattis pellentesque id. Egestas tellus rutrum tellus pellentesque. Amet luctus venenatis lectus magna fringilla urna porttitor. Mi sit amet mauris commodo. Nibh sed pulvinar proin gravida hendrerit lectus a. Faucibus a pellentesque sit amet porttitor eget dolor morbi non. Amet aliquam id diam maecenas ultricies. Consectetur purus ut faucibus pulvinar. Ultricies tristique nulla aliquet enim. Id leo in vitae turpis massa sed elementum tempus. Varius quam quisque id diam vel quam elementum. Hendrerit gravida rutrum quisque non tellus orci. In ante metus dictum at. Purus sit amet luctus venenatis lectus magna fringilla. Ut sem viverra aliquet eget sit amet. Ac tincidunt vitae semper quis lectus. Congue quisque egestas diam in arcu.</span></p>
-
-				<p><span class="wrapping">Suspendisse potenti nullam ac tortor. Arcu cursus euismod quis viverra nibh. Ipsum suspendisse ultrices gravida dictum fusce. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Sit amet consectetur adipiscing elit pellentesque. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Egestas tellus rutrum tellus pellentesque. Vitae aliquet nec ullamcorper sit. Vestibulum sed arcu non odio euismod lacinia. Sem et tortor consequat id. Ante metus dictum at tempor. Faucibus nisl tincidunt eget nullam non. Habitasse platea dictumst quisque sagittis. Placerat vestibulum lectus mauris ultrices eros.</span></p>
+				<p><span class="wrapping">Suspendisse potenti nullam ac tortor. Arcu cursus euismod quis viverra nibh. Ipsum suspendisse ultrices gravida dictum fusce. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Sit amet consectetur adipiscing elit pellentesque. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Egestas tellus rutrum tellus pellentesque. Vitae aliquet nec ullamcorper sit. Vestibulum sed arcu non odio euismod lacinia. Sem et tortor consequat id. Ante metus dictum at tempor. Faucibus nisl tincidunt eget nullam non. Habitasse platea dictumst quisque sagittis. Placerat vestibulum lectus mauris ultrices eros.</span></p>-->
 			</div>
 
 		</div>
