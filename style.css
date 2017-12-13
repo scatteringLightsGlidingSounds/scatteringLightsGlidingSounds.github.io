@@ -42,7 +42,7 @@ html, body{
 #containerHeader .mainTitle{
     letter-spacing:-0.1em;
     font-size:80px;
-    z-index:3;
+    z-index:0;
 }
 #containerHeader .subTitle{
     letter-spacing:-0.1em;
