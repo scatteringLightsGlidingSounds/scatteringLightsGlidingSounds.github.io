@@ -31,14 +31,15 @@ html, body{
     z-index:-1;
 }
 
+
 #containerHeader{
     color:#FFF;
     letter-spacing:-0.1em;
     position:absolute;
     margin:0 150px;
-    padding-left:800px;
+    /*padding-left:360px;*/
     /*padding:0;*/
-    top:600px;
+    top:640px;
     z-index:3;
     /*padding-left:800px;*/
 }
@@ -56,67 +57,6 @@ html, body{
     font-family:'Noto Sans KR', sans-serif;
     background:#000;
 }
-
-#articleBodyHalf{
-    font-family:'Noto Sans KR', sans-serif;
-    position: absolute;
-    margin-top: -100px;
-    /*display: block;*/
-    font-size: 28px;
-    padding: 0 0 700px 0;
-    color: #FFF;
-    z-index: 4;
-    max-width:800px;
-    top: 840px;
-    padding-left:800px;
-    margin:0 150px;
-    letter-spacing: -0.1em;
-}
-
-@media only screen and (max-width:800px){
-    #containerHeader{
-        color:#FFF;
-        letter-spacing:-0.1em;
-        position:absolute;
-        margin:0 150px;
-        padding-left:360px;
-        /*padding:0;*/
-        top:600px;
-        z-index:3;
-        /*padding-left:800px;*/
-    }
-
-    #containerHeader .mainTitle{
-        letter-spacing:-0.1em;
-        font-size:80px;
-        line-height:0.8em;
-        z-index:3;
-    }
-    #containerHeader .subTitle{
-        letter-spacing:-0.1em;
-        font-size: 40px;
-        display:inline-block;
-        font-family:'Noto Sans KR', sans-serif;
-        background:#000;
-    }
-
-    #articleBodyHalf{
-        font-family:'Noto Sans KR', sans-serif;
-        position: absolute;
-        margin-top: -100px;
-        /*display: block;*/
-        font-size: 18px;
-        padding: 0 0 700px 0;
-        color: #FFF;
-        z-index: 4;
-        max-width:800px;
-        top: 840px;
-        padding-left:360px;
-        margin:0 150px;
-        letter-spacing: -0.1em;
-    }
-}
-
 #articleHeader{
     position:fixed;
     display:block;
@@ -127,6 +67,22 @@ html, body{
     background-image:url('./data/images/gr.png');
     background-repeat: repeat-x;
     z-index:0;
+}
+
+ #articleBodyHalf{
+    font-family:'Noto Sans KR', sans-serif;
+    position: absolute;
+    margin-top: -100px;
+    /*display: block;*/
+    font-size: 18px;
+    padding: 0 0 700px 0;
+    color: #FFF;
+    z-index: 4;
+    max-width:600px;
+    top: 840px;
+    /*padding-left:360px;*/
+    margin:0 150px;
+    letter-spacing: -0.1em;
 }
 
 #articleBodyFull{
