@@ -47,6 +47,7 @@ html, body{
     letter-spacing:-0.1em;
     font-size:80px;
     z-index:3;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 #containerHeader .subTitle{
     letter-spacing:-0.1em;
