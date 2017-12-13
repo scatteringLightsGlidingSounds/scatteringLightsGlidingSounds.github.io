@@ -17,7 +17,7 @@ function OscilMonitor(){
             this.freq1.push(float(0.0));
             this.freq2.push(float(0.0));
         }
-        print(this.targetFlowerBedBuffer);
+        // print(this.targetFlowerBedBuffer);
     };
 
     this.getFlowerBedValue = function(index){  return this.flowerBedBuffer[index]; }

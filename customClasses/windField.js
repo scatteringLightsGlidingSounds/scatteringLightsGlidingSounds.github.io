@@ -50,7 +50,7 @@ function WindField(r) {
 
 	this.setAngle = function(angle) {
 		this.targetWindAngle = angle;
-		print("setted : " + this.windAngle);
+		// print("setted : " + this.windAngle);
 	}
 
 

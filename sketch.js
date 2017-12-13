@@ -75,7 +75,7 @@ function setup() {
 		var tPos = createVector(random(width), random(height));
 		lightParticles.push(new LightParticle(tPos, random(0.3, 0.7), random(0.3, 0.5)));
 	}
-	print(poleLights.length);
+	// print(poleLights.length);
 	gr = createVector(0, 2);
 }
 
@@ -86,7 +86,7 @@ function draw() {
 
 	if (millis() - lastAngleUpdatedTimer > 30 * 1000) {
 		windField.setAngle(random(180, 270));
-		print("wind changed!");
+		// print("wind changed!");
 
 		this.oscilMonitor.setFreq(random(20, 100));
 
@@ -152,10 +152,10 @@ function draw() {
 
 	
 
-	push();
-	fill(255);
-	text(windField.windAngle, mouseX, mouseY);
-	pop();
+	// push();
+	// fill(255);
+	// text(windField.windAngle, mouseX, mouseY);
+	// pop();
 
 	// oscilMonitor.draw(height-80);
 }
