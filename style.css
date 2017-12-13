@@ -42,7 +42,7 @@ html, body{
 #containerHeader .mainTitle{
     letter-spacing:-0.1em;
     font-size:80px;
-    z-index:0;
+    z-index:3;
 }
 #containerHeader .subTitle{
     letter-spacing:-0.1em;
@@ -60,7 +60,7 @@ html, body{
     height:200px;
     background-image:url('./data/images/gr.png');
     background-repeat: repeat-x;
-    z-index:4;
+    z-index:0;
 }
 
 #articleBodyHalf{
