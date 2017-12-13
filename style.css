@@ -16,11 +16,11 @@ html, body{
     overflow-x: hidden;
 }
 
+
 #container{
     width:1920px;
     margin:0 auto 0 auto;
 }
-
 
 #p5Container {
     position:fixed;
@@ -36,8 +36,8 @@ html, body{
     letter-spacing:-0.1em;
     position:absolute;
     margin:0 150px;
-    left:30%;
-    padding:0;
+    padding-left:800px;
+    /*padding:0;*/
     top:600px;
     z-index:3;
     /*padding-left:800px;*/
@@ -46,14 +46,75 @@ html, body{
 #containerHeader .mainTitle{
     letter-spacing:-0.1em;
     font-size:80px;
+    line-height:0.8em;
     z-index:3;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 #containerHeader .subTitle{
     letter-spacing:-0.1em;
     font-size: 40px;
     display:inline-block;
+    font-family:'Noto Sans KR', sans-serif;
     background:#000;
+}
+
+#articleBodyHalf{
+    font-family:'Noto Sans KR', sans-serif;
+    position: absolute;
+    margin-top: -100px;
+    /*display: block;*/
+    font-size: 28px;
+    padding: 0 0 700px 0;
+    color: #FFF;
+    z-index: 4;
+    max-width:800px;
+    top: 840px;
+    padding-left:800px;
+    margin:0 150px;
+    letter-spacing: -0.1em;
+}
+
+@media only screen and (max-width:800px){
+    #containerHeader{
+        color:#FFF;
+        letter-spacing:-0.1em;
+        position:absolute;
+        margin:0 150px;
+        padding-left:360px;
+        /*padding:0;*/
+        top:600px;
+        z-index:3;
+        /*padding-left:800px;*/
+    }
+
+    #containerHeader .mainTitle{
+        letter-spacing:-0.1em;
+        font-size:80px;
+        line-height:0.8em;
+        z-index:3;
+    }
+    #containerHeader .subTitle{
+        letter-spacing:-0.1em;
+        font-size: 40px;
+        display:inline-block;
+        font-family:'Noto Sans KR', sans-serif;
+        background:#000;
+    }
+
+    #articleBodyHalf{
+        font-family:'Noto Sans KR', sans-serif;
+        position: absolute;
+        margin-top: -100px;
+        /*display: block;*/
+        font-size: 18px;
+        padding: 0 0 700px 0;
+        color: #FFF;
+        z-index: 4;
+        max-width:800px;
+        top: 840px;
+        padding-left:360px;
+        margin:0 150px;
+        letter-spacing: -0.1em;
+    }
 }
 
 #articleHeader{
@@ -68,26 +129,12 @@ html, body{
     z-index:0;
 }
 
-#articleBodyHalf{
-    position: absolute;
-    margin-top: -100px;
-    /*display: block;*/
-    font-size: 36px;
-    padding: 0 0 700px 0;
-    color: #FFF;
-    z-index: 4;
-    max-width:800px;
-    top: 840px;
-    left:30%;
-    margin:0 150px;
-    letter-spacing: -0.1em;
-}
-
 #articleBodyFull{
+    font-family:'Noto Sans KR', sans-serif;
     position: absolute;
     margin-top: -100px;
     /*display: block;*/
-    font-size: 36px;
+    font-size: 28px;
     padding: 0 0 700px 0;
     color: #FFF;
     z-index: 4;
