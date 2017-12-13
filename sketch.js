@@ -1,10 +1,14 @@
-var lightParticles = [];
 var numberOfParticles = 800;
 var sitemap;
+
+var lightParticles = [];
 var poleLights = [];
 var flowerBedLights = [];
+var dmxAddressBook = [];
 var gr;
 var windField;
+var oscilMonitor;
+
 var lastAngleUpdatedTimer;
 
 // light json file load
@@ -14,6 +18,7 @@ function preload(){
 	sitemap = loadImage("./data/images/sitemap.png");
 	poleLightJSON = loadJSON("./data/json/pole.json");
 	flowerBedsJSON = loadJSON("./data/json/flowerPot.json");
+	dmxAddressJSON = loadJSON("./data/json/dmxAddresses.json");
 }
 
 function setup() {
@@ -23,8 +28,14 @@ function setup() {
 	// print(poleLightJSON.poles.length);
 
 	windField = new WindField(50);
+	oscilMonitor = new OscilMonitor();
+	oscilMonitor.setup();
 	windField.setAngle(random(180, 360));	
 	lastAngleUpdatedTimer = millis();
+
+	oscilMonitor.setFreq(random(20, 300));
+	oscilMonitor.setParamA(random(2,4));
+	oscilMonitor.setParamB(random(1,5));
 
 	// load pole lights json data
 	for(var i=0; i<poleLightJSON.poles.length; i++){
@@ -45,9 +56,18 @@ function setup() {
 			flowerBedsJSON.flowerBeds[i].ID,
 			tPos,
 			2,
-			0,
-			140));
+			1,
+			100));
 		flowerBedLights[i].setColor(71, 200, 242, 100);
+	}
+
+	// load controllable address book
+	for(var i=0; i<dmxAddressJSON.root.flowerPot.length; i++){
+		var tAddresses = [];
+		for(var j=0; j<dmxAddressJSON.root.flowerPot[i].addr.length; j++){
+			tAddresses.push(dmxAddressJSON.root.flowerPot[i].addr[j]);
+		}
+		dmxAddressBook.push(tAddresses);
 	}
 
 	// generate particles to random position 
@@ -62,10 +82,14 @@ function setup() {
 function draw() {
 	image(sitemap, 0, 0);
 	windField.update();
+	oscilMonitor.updateBuffer();
 
-	if (millis() - lastAngleUpdatedTimer > 10 * 1000) {
+	if (millis() - lastAngleUpdatedTimer > 30 * 1000) {
 		windField.setAngle(random(180, 270));
 		print("wind changed!");
+
+		this.oscilMonitor.setFreq(random(20, 100));
+
 		lastAngleUpdatedTimer = millis();
 	}
 
@@ -92,6 +116,32 @@ function draw() {
 		flowerBedLights[i].draw();
 	}
 
+	for(var i=0; i<this.dmxAddressBook.length; i++){
+		for(var j=0; j<this.dmxAddressBook[i].length;j++){
+			for(var k=0; k<this.flowerBedLights.length; k++){ 
+				if(this.dmxAddressBook[i][j] == this.flowerBedLights[k].ID)	{
+					// print(this.flowerBedLights[k]);
+					// print(
+					// 	this.oscilMonitor.getFlowerBedValue(int(map(k, 0, this.flowerBedLights.length, 1, width)), 0, 1, 0, 255)
+					// );
+					this.flowerBedLights[k].setAlpha(
+						map(this.oscilMonitor.getFlowerBedValue(int(map(k, 0, this.flowerBedLights.length, 1, width))), 0, 1, 0, 140));
+				}
+			}
+		}
+	}
+
+	// for(int i=0; i<lightController.flowerPots.size(); i++){
+	// 	lightController.onFlowerPotWithAddress(i+1, bDMXIDCheck);
+	// 	lightController.flowerPots[i]->setAlpha(ofMap(oscilMonitor.getFlowerBedValue((int)ofMap(i, 0, lightController.flowerPots.size(), 1, 1920)), 0, 1, flowerMinAlpha, flowerMaxAlpha));
+	// 	for(int j=0; j<lightController.dmxFlowerPot[i].size(); j++){
+	// 		string tID = lightController.dmxFlowerPot[i][j];
+	// 		tID.erase(0, 1);
+	// 		int k = ofToInt(tID);
+	// 		lightController.previewFlowerPots[k]->setAlpha(ofMap(oscilMonitor.getFlowerBedValue((int)ofMap(i, 0, lightController.previewFlowerPots.size(), 1, 1920)), 0, 1, flowerMinAlpha, flowerMaxAlpha));
+	// 	}
+	// }
+
 	// animate particles
 	for(var i=0; i<lightParticles.length; i++)		{
 		lightParticles[i].follow(windField);
@@ -100,10 +150,14 @@ function draw() {
 		lightParticles[i].draw(false);
 	}
 
+	
+
 	push();
 	fill(255);
 	text(windField.windAngle, mouseX, mouseY);
 	pop();
+
+	// oscilMonitor.draw(height-80);
 }
 
 
