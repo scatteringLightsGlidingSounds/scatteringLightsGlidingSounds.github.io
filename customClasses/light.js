@@ -76,7 +76,7 @@ function Light(ID, pos, type, minAlpha, maxAlpha){
 		} else if (this.type == 2){	// previewFlowerPots
 			push();
 			noFill();
-			stroke(this.r, this.g, this.b, 140);
+			stroke(71, 200, 242, this.a);
 
 			if(this.isOn)	ellipse(0, 0, 6, 6);
 			ellipse(0, 0, 6, 6);
