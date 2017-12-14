@@ -1,6 +1,5 @@
  	
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 
 @font-face {
     font-family: 'Iosevka';
@@ -17,6 +16,9 @@ html, body{
     overflow-x: hidden;
 }
 
+a{
+    color:#FFFFFF;
+}
 
 #container{
     width:1920px;
@@ -25,8 +27,6 @@ html, body{
 
 #p5Container {
     position:fixed;
-    left:50%;
-    transform:translate(-50%, 0);
     /*display:block;*/
     top:0;
     width:1920px;
@@ -48,7 +48,6 @@ html, body{
 }
 
 #containerHeader .mainTitle{
-    font-family:'Share Tech Mono', monospace;
     letter-spacing:-0.1em;
     font-size:80px;
     line-height:0.8em;
@@ -112,4 +111,8 @@ html, body{
 .wrappingEN{
     background:rgba(0, 0, 0, 0.75);
     margin-top:30px;
+}
+
+.descImageContainer{
+    margin:0 -150px;
 }
