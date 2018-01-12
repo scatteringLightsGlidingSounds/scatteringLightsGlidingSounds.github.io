@@ -1,5 +1,6 @@
  	
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:200,300');
 
 @font-face {
     font-family: 'Iosevka';
@@ -20,23 +21,18 @@ a{
     color:#FFFFFF;
 }
 
-.wrappingEN {
-    display:none;
-}
-
-.wrappingKR{
-    display:normal;
-}
-
 #langSelect{
     position:fixed;
-    top:20px;
     right:48px;
     font-size:24px;
     color:#FFF;
     background:#000;
     z-index:99;
     padding:10px;
+}
+
+#langSelect .wrappingEN{
+    font-size:28px;
 }
 
 #container{
@@ -104,7 +100,11 @@ a{
     top: 840px;
     /*padding-left:360px;*/
     margin:0 150px;
-    letter-spacing: -0.1em;
+    /* letter-spacing: -0.1em; */
+}
+
+#articleBodyHalf .wrappingEN{
+    font-size:21px;
 }
 
 #articleBodyFull{
@@ -121,15 +121,23 @@ a{
     margin:0 150px;
 }
 
+#articleBodyFull .wrappingEN{
+    font-size:32px;
+}
+
 .wrappingKR{
     background:rgba(0, 0, 0, 0.75);
     margin-top:30px;
     letter-spacing: -0.1em;
+    display:normal;
 }
 
 .wrappingEN{
     background:rgba(0, 0, 0, 0.75);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 300;
     margin-top:30px;
+    display:none;
 }
 
 .descImageContainer{
