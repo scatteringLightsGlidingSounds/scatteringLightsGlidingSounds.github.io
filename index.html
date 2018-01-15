@@ -42,12 +42,19 @@
 		<div id="langSelect" class="wrappingKR">
 			<a href="#" class="selectEN">ENGLISH</a>
 		</div>
-		
+		<div id="topHeaderArea">
+				<div id="topHeaderLeft">SCATTERING LIGHTS<br/>GLIDING SOUNDS</div>
+				<div id="topHeaderRight"> 
+					<li>/ <a href="#scatteringLights">scattering lights</a></li>
+					<li>/ <a href="#glidingSounds">gliding sounds</a></li>
+				</div>
+			</div>
 		<div id="container">
 			<div id="containerHeader">
 				<span class="mainTitle">SCATTERING LIGHTS</br>GLIDING SOUNDS</span><br/>
 				<span class="subTitle">흩어지는 빛, 미끄러지는 소리</span>
 			</div>
+			
 			<div id="p5Container"></div>
 			<div id="articleHeader"></div>
 			<div id="articleBodyHalf">
@@ -70,58 +77,99 @@
 		
 
 			<div id="articleBodyFull">
-				<span class="wrappingKR">
-				서울로에는 111개의 기둥조명과 600여개가 넘는 화분조명이 있다. 이들 중, 폴 조명과 다르게 화분조명의 경우 갯수가 많아 아쉽게도 개별제어가 불가능했다. 대신에 3개에서 많게는 7개정도씩 묶어서 그룹별로 제어가 가능했다.
-				</span>
+				<div id="scatteringLight">
+					<a id="scatteringLights"><div style="height:400px; display:block;"></div></a>
+					<div id="header_inner">SCATTERING LIGHTS</div>
+					<span class="wrappingKR">
+					서울로에는 111개의 기둥조명과 600여개가 넘는 화분조명이 있다. 이들 중, 폴 조명과 다르게 화분조명의 경우 갯수가 많아 아쉽게도 개별제어가 불가능했다. 대신에 3개에서 많게는 7개정도씩 묶어서 그룹별로 제어가 가능했다.<br/><br/>
+					본격적인 작업에 앞서, 조명이 동작할 때, 어떠한 패턴으로 제어를 할것인지를 큰 틀에서 모니터링 할 수 있어야 했다. 이를 위해, 서울로의 전체 조명의 위치를 가늠할 수 있는 방법을 고민해야 했는데, 서울로의 도면에서 각 조명의 아이디와, 위치를 2차원 평면에 매핑하고, 이것들을 프로그램에서 불러올 수 있는 json 파일의 형태로 정리하여 연동되도록 하였다. 서울로의 고가는 그 모양을 벡터파일로 다듬어 추출한 뒤 이미지파일로 변환하여 사용할 수 있게 하였다.
+					</span>
 
-				<span class="wrappingEN">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</span>
+					<span class="wrappingEN">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
 
-				<div style="height:400px;"></div>
-				<span class="wrappingKR">
-				본격적인 작업에 앞서, 조명이 동작할 때, 어떠한 패턴으로 제어를 할것인지를 큰 틀에서 모니터링 할 수 있어야 했다. 이를 위해, 서울로의 전체 조명의 위치를 가늠할 수 있는 방법을 고민해야 했는데, 서울로의 도면에서 각 조명의 아이디와, 위치를 2차원 평면에 매핑하고, 이것들을 프로그램에서 불러올 수 있는 json 파일의 형태로 정리하여 연동되도록 하였다. 서울로의 고가는 그 모양을 벡터파일로 다듬어 추출한 뒤 이미지파일로 변환하여 사용할 수 있게 하였다.
-				</span>
-				<span class="wrappingEN">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</span>
-				<div class="descImageContainer" style="height:1240px;"><img src="./data/images/sitemapWorks.png" style="width:100%;"></div>
+					
+					<div class="descImageContainer" style="height:1240px;"><img src="./data/images/sitemapWorks.png" style="width:100%;"></div>
 
 
-				<div style="height:400px;"></div>
-				<span class="wrappingKR">
-				폴 조명은 개별제어가 가능하다. 평창에서의 바람에 흩날리는 가상의 씨앗들이 날아다니다 조명들을 건들었을 때, 각 폴들이 반짝이는 상상을 해보았다. 평창 날씨정보에서 얻어온 풍향을 기준으로, 2D Perlin 노이즈 알고리즘을 적용해, 실제와 흡사하게 미세한 풍향의 변화를 시뮬레이션하고, 풍속에 따라 날아다니는 파티클을 구현했다. 각 파티클들이 폴조명에 닿으면, 조명이 반짝이도록 프로그래밍했다.
-				</span>
-				<span class="wrappingEN">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</span>
-				<div class="descImageContainer" style="height:840px;"><img src="./data/images/windField.png" style="width:100%;"></div>
-				
-				
+					<div style="height:400px;"></div>
+					<span class="wrappingKR">
+					폴 조명은 개별제어가 가능하다. 평창에서의 바람에 흩날리는 가상의 씨앗들이 날아다니다 조명들을 건들었을 때, 각 폴들이 반짝이는 상상을 해보았다. 평창 날씨정보에서 얻어온 풍향을 기준으로, 2D Perlin 노이즈 알고리즘을 적용해, 실제와 흡사하게 미세한 풍향의 변화를 시뮬레이션하고, 풍속에 따라 날아다니는 파티클을 구현했다. 각 파티클들이 폴조명에 닿으면, 조명이 반짝이도록 프로그래밍했다.
+					</span>
+					<span class="wrappingEN">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
+					<div class="descImageContainer" style="height:840px;"><img src="./data/images/windField.png" style="width:100%;"></div>
+					
+					
 
-				<div style="height:400px;"></div>
-				<span class="wrappingKR">
-				화분조명의 제어를 위해서는 다른식의 접근방법을 고민해야 했는데, 함께 플레이되는 사운드 미디어에서 아이디어를 얻어왔다. 자연적인 신호, 특히 소리라는 것은 결국 순수한 사인파형이 합성된 신호이다. 이에 착안하여, 서울과 평창 두 위치에서 수집되는 온도 및 습도, 강수량등의 정보를 사인파형을 구성하는 주파수, 위상, 크기등의 파라메터로 대입하여, 두개의 사인파를 만든다음, 이를 합성하여 시시각각 변하는 연속적인 일종의 wave파형을 만들어내었다. 이 wave파형은 화분조명그룹의 갯수에 따라 고르게 간격을 유지하고, 이를 기반으로 샘플링되어, 최종적으로는 각 그룹의 밝기로 변환된다.
-				</span>
-				<span class="wrappingEN">
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</span>
-				<div class="descImageContainer" style="height:480px"><img src="./data/images/flowerBed.png" style="width:100%;"></div>
-				
+					<div style="height:400px;"></div>
+					<span class="wrappingKR">
+					화분조명의 제어를 위해서는 다른식의 접근방법을 고민해야 했는데, 함께 플레이되는 사운드 미디어에서 아이디어를 얻어왔다. 자연적인 신호, 특히 소리라는 것은 결국 순수한 사인파형이 합성된 신호이다. 이에 착안하여, 서울과 평창 두 위치에서 수집되는 온도 및 습도, 강수량등의 정보를 사인파형을 구성하는 주파수, 위상, 크기등의 파라메터로 대입하여, 두개의 사인파를 만든다음, 이를 합성하여 시시각각 변하는 연속적인 일종의 wave파형을 만들어내었다. 이 wave파형은 화분조명그룹의 갯수에 따라 고르게 간격을 유지하고, 이를 기반으로 샘플링되어, 최종적으로는 각 그룹의 밝기로 변환된다.
+					</span>
+					<span class="wrappingEN">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</span>
+					<div class="descImageContainer" style="height:480px"><img src="./data/images/flowerBed.png" style="width:100%;"></div>
+					
 
-				<div style="height:400px;"></div>
-				<span class="wrappingKR">
-				작업은 <a href="http://openframeworks.cc" target="blank">오픈프레임웍스</a>로 구현되었다.<br/>
-				웹사이트 상단의 프로그램은 <a href="http://p5js.org">p5js</a>로 구현되었으며, 오픈프레임웍스의 코드가 포팅되었다.<br/>
-				조명제어를 위해 <a href="https://github.com/kylemcdonald/ofxDmx">ofxDMX</a> 라이브러리가 사용되었다.<br/><br/>
-				오픈프레임웍스 및 라이브러리 개발자들에게 이자리를 빌어 감사의 말씀을 전한다.<br/>
-				</span>
-				<span class="wrappingEN">
-				this project implemented by <a href="http://openframeworks.cc" target="blank">openFrameworks</a>.<br/>
-				website application is implemented by <a href="http://p5js.org">p5js</a>, which is ported from openFrameworks.<br/>
-				for control lights, use <a href="https://github.com/kylemcdonald/ofxDmx">ofxDMX</a>addon for openFrameworks.<br/><br/>
-				thank you ofTeam.<br/>
-				</span>
+					<div style="height:400px;"></div>
+					<span class="wrappingKR">
+					작업은 <a href="http://openframeworks.cc" target="blank">오픈프레임웍스</a>로 구현되었다.<br/>
+					웹사이트 상단의 프로그램은 <a href="http://p5js.org">p5js</a>로 구현되었으며, 오픈프레임웍스의 코드가 포팅되었다.<br/>
+					조명제어를 위해 <a href="https://github.com/kylemcdonald/ofxDmx">ofxDMX</a> 라이브러리가 사용되었다.<br/><br/>
+					오픈프레임웍스 및 라이브러리 개발자들에게 이자리를 빌어 감사의 말씀을 전한다.<br/>
+					</span>
+					<span class="wrappingEN">
+					this project implemented by <a href="http://openframeworks.cc" target="blank">openFrameworks</a>.<br/>
+					website application is implemented by <a href="http://p5js.org">p5js</a>, which is ported from openFrameworks.<br/>
+					for control lights, <a href="https://github.com/kylemcdonald/ofxDmx">ofxDMX</a> addon used for openFrameworks.<br/><br/>
+					</span>
+				</div>
+
+
+				<div id="glidingSounds">
+					<a id="glidingSounds"><div style="height:400px; display:block;"></div></a>
+					<div id="header_inner">GLIDING SOUNDS</div>
+					<span class="wrappingKR">
+					미끄러지는 소리는 서울과 평창을 이어주는 것에서 시작했다. 이를 위해서 평창 올림픽이 열리는 장소와 서울로7017에서의 실시간 날씨 데이터를 소리로 변환하는 작업을 구상했다. 이 소리는 2017년 11월부터 2018년 2월까지 매일 두 장소 날씨에 따라 점차 변화 할 것이다. 실시간 날씨 데이터를 소리로 치환하는 데에는 오픈소스 그래픽 시퀀서 애플리케이션인 이아닉스와, 커스텀으로 제작된 Max/MSP 패치, 이동훈 작가가 자체적으로 개발한 실시간 날씨 API 데이터 리시버, 에이블톤 라이브 프로그램을 이용하였다. 
+					</span>
+
+					<span class="wrappingEN">
+					Central to the “Gliding Sounds” aspect of this project was bridging Pyeongchang with Seoul. In order to accomplish this, realtime weather data from the central site of the Pyeongchang Olympics and Seoullo 7017 was transformed to gradually transforming music over the course of the installation’s lifetime between November 2017 and Feburary 2018. The main software being used to accomplish this was a combination of Open-Source graphic sequencer software Iannix, a custom-made patch created in Max/MSP, API weather data received through a standalone application created by Donghoon Yi, and a generative music arrangement created in Ableton Live. By sharing the same realtime API weather data the light and sound of the work synchronize together.
+					</span>
+
+					<div style="height:400px;"></div>
+					<span class="wrappingKR">
+					서울로7017의 지도와 서울과 평창 사이의 지형도를 이용하여 만든 도형악보를 만들었다. 이 도형악보는 이아닉스라는 프로그램을 통해 연주된다. 실시간 날씨 데이터에 받는 온도, 풍속, 풍향 등의 정보는 이 작업을 위해 개발된 Max/MSP 패치를 통해 소리의 정보로 변환된다. 결국, 실시간 날씨 데이터를 통해 소리의 속도, 연주되는 악기 등이 달라진다. 빛과 소리는 같은 실시간 날씨 데이터를 사용함으로써 서로 싱크 시켰다.
+					</span>
+					<span class="wrappingEN">
+					A map of Seoullo 7017 merged with the topography of the land connecting Seoul with Pyeongchang actually create the graphic animated music score for the project. A detail frorm the animated graphic score is as follows. This was done using Iannix.<br/><br/>
+					The weather data affected the speed and number of sounds being played. Factors such as temperature, wind speed, wind direction, and precipitation (such as rain or snow) all impact the resulting sounds. These weather changes are translated into commands on the computer using the Max/MSP patch I developed.
+					</span>
+
+					<div class="descImageContainer"><img src="./data/images/ianixx_screenshot.png" style="width:100%;">	</div>
+					<span class="wrappingEN">
+					
+					</span>
+
+					<div style="height:400px;"></div>
+					<span class="wrappingKR">
+					미끄러지는 소리의 멜로디는 동계올림픽 종목의 특징들에서 영감을 받아서 만들었다. 눈, 얼음판 위에서 미끄러지기, 커브, 빙글빙글 돌기, 내려가서 올라가기 등의 움직임은 악기 소리, 멜로디 구성, 아르페지에터 스타일, 플레이트 리버브 등으로 변화시켰다. 모든 멜로디의 소리는 아날로그 신디사이저를 사용하여 만들었다.
+					</span>
+					
+					<span class="wrappingEN">
+					Melodies of the Gliding Sounds was inspired by the characteristics of the winter Olympics games itself. Movements like gliding, sliding, curving, going up and down on snow slope or ice rink are transformed into musical compositions such as instrument voices, chords, arpeggiator style, plate reverb and so on.
+					</span>
+					<div class="descImageContainer"><img src="./data/images/Olympic-movements_soundideas.png" style="width:100%;"></div>
+
+					<span class="wrappingEN">
+					<div style="height:400px;"></div>
+					The weather data affected the speed and number of sounds being played. Factors such as temperature, wind speed, wind direction, and precipitation (such as rain or snow) all impact the resulting sounds. These weather changes are translated into commands on the computer using the Max/MSP patch I developed.
+					</span>
+
+				</div>
 
 			</div>
 
