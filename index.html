@@ -33,6 +33,7 @@
 				});
 			}); 
 
+			
 			$(window).on('scroll', function(){
 				if ($(this).scrollTop()>840)  {
 					$('#topHeaderArea').show();
@@ -43,17 +44,17 @@
 		</script>
 	</head>
 	<body>
-		<div id="langSelect" class="wrappingEN">
-			<a href="#" class="selectKR">한국어</a>
+		<div id="langSelect">
+			<a href="#" class="wrappingEN selectKR">한국어</a>
+			<a href="#" class="wrappingKR selectEN">ENGLISH</a>
 		</div>
-		<div id="langSelect" class="wrappingKR">
-			<a href="#" class="selectEN">ENGLISH</a>
-		</div>
-		<div id="topHeaderArea">
-			<div id="topHeaderLeft">SCATTERING LIGHTS<br/>GLIDING SOUNDS</div>
-			<div id="topHeaderRight"> 
-				<li>/ <a href="#scatteringLights">scattering lights</a></li>
-				<li>/ <a href="#glidingSounds">gliding sounds</a></li>
+		<div id="topHeader">
+			<div id="topHeaderArea">
+				<div id="topHeaderLeft">SCATTERING LIGHTS<br/>GLIDING SOUNDS</div>
+				<div id="topHeaderRight"> 
+					<li>/ <a href="#scatteringLights">scattering lights</a></li>
+					<li>/ <a href="#glidingSounds">gliding sounds</a></li>			
+				</div>
 			</div>
 		</div>
 		<div id="container">
