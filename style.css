@@ -79,15 +79,8 @@ a{
         margin-left:20px;
     }
 
-    li{
-        line-height:88px;
-        display:inline-block;
-        list-style-type: none; 
-    }
-
     #topHeaderRight li{
         background:#000;
-        margin-left:5px;
         padding:0 20px;
         font-size:24px;
         line-height:88px;
@@ -98,7 +91,7 @@ a{
    
 
     #topHeaderRight li:hover{
-        /* background:#FFF; */
+        background:#222;
         /* color:#000; */
         cursor:pointer;
     }
