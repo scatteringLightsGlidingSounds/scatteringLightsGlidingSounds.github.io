@@ -37,7 +37,7 @@ a{
 
 #container{
     width:1920px;
-    margin:0 auto 0 auto;
+    margin:0 auto;
 }
 
 #p5Container {
@@ -165,8 +165,11 @@ a{
     /* background:#000; */
     color:#FFF;
     position:fixed;
-    top:0px;
+    transform:translate(-50%, 0);
+    left:50%;
+    width:1920px;
     margin:0 130px;
+    top:0px;
     display:block;
     font-family: 'Iosevka', 'sans-serif';
     line-height:0.8em;
@@ -221,4 +224,8 @@ a{
 #topHeaderRight li a:hover{
     /* color:#000; */
     text-decoration: underline;
+}
+
+#margin{
+    height:700px;
 }

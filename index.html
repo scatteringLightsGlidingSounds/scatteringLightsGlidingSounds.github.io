@@ -50,12 +50,12 @@
 			<a href="#" class="selectEN">ENGLISH</a>
 		</div>
 		<div id="topHeaderArea">
-				<div id="topHeaderLeft">SCATTERING LIGHTS<br/>GLIDING SOUNDS</div>
-				<div id="topHeaderRight"> 
-					<li>/ <a href="#scatteringLights">scattering lights</a></li>
-					<li>/ <a href="#glidingSounds">gliding sounds</a></li>
-				</div>
+			<div id="topHeaderLeft">SCATTERING LIGHTS<br/>GLIDING SOUNDS</div>
+			<div id="topHeaderRight"> 
+				<li>/ <a href="#scatteringLights">scattering lights</a></li>
+				<li>/ <a href="#glidingSounds">gliding sounds</a></li>
 			</div>
+		</div>
 		<div id="container">
 			<div id="containerHeader">
 				<span class="mainTitle">SCATTERING LIGHTS</br>GLIDING SOUNDS</span><br/>
@@ -67,7 +67,7 @@
 			<div id="articleBodyHalf">
 				<p><span class="wrappingEN">
 				'Scattering Lights, Gliding Sounds' transforming weather of Seoul and Pyeongchang weather information like temperatur, wind direction, windspeed, humidigy to light and sound signal.
-				by <a href="http://kimdaumm.tumblr.com//" target="blank">Kim Daum</a>, <a href="http://icq4ever.net/" target="blank">Yi Donghoon</a>, <a href="http://www.hasanhujairi.com/" target="blank">hasan hujairi</a>. 
+				by <a href="http://kimdaumm.tumblr.com//" target="blank">Kim Daum</a>, <a href="http://icq4ever.net/" target="blank">Yi Donghoon</a>, <a href="http://www.hasanhujairi.com/" target="blank">Hasan Hujairi</a>. 
 				</span></p>
 				<p><span class="wrappingEN">
 				this project will be played from 17:30 to 21:00 everyday, until 28th, FEB, 2018, at 
@@ -102,7 +102,7 @@
 					<div class="descImageContainer" style="height:1240px;"><img src="./data/images/sitemapWorks.png" style="width:100%;"></div>
 
 
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					<span class="wrappingKR">
 					폴 조명은 개별제어가 가능하다. 평창에서의 바람에 흩날리는 가상의 씨앗들이 날아다니다 조명들을 건들었을 때, 각 폴들이 반짝이는 상상을 해보았다. 평창 날씨정보에서 얻어온 풍향을 기준으로, 2D Perlin 노이즈 알고리즘을 적용해, 실제와 흡사하게 미세한 풍향의 변화를 시뮬레이션하고, 풍속에 따라 날아다니는 파티클을 구현했다. 각 파티클들이 폴조명에 닿으면, 조명이 반짝이도록 프로그래밍했다.
 					</span>
@@ -113,17 +113,17 @@
 					
 					
 
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					<span class="wrappingKR">
 					화분조명의 제어를 위해서는 다른식의 접근방법을 고민해야 했는데, 함께 플레이되는 사운드 미디어에서 아이디어를 얻어왔다. 자연적인 신호, 특히 소리라는 것은 결국 순수한 사인파형이 합성된 신호이다. 이에 착안하여, 서울과 평창 두 위치에서 수집되는 온도 및 습도, 강수량등의 정보를 사인파형을 구성하는 주파수, 위상, 크기등의 파라메터로 대입하여, 두개의 사인파를 만든다음, 이를 합성하여 시시각각 변하는 연속적인 일종의 wave파형을 만들어내었다. 이 wave파형은 화분조명그룹의 갯수에 따라 고르게 간격을 유지하고, 이를 기반으로 샘플링되어, 최종적으로는 각 그룹의 밝기로 변환된다.
 					</span>
 					<span class="wrappingEN">
-					for controle flowerbed lights, we need to approach different way. An idea is from sounds which will be playing together. A natural signal, "sound" is actually a form of composition of pure sine waves. I made two sine waves, with difference between temperature, humidity, precipitaion of Seoul and Pyeongchang, as a parameter of frequency, phase, amplitude. and synthesis these two sine waves. synthesis wave sampled by number of flowerbeds finally it can be transfomed to brightness of each group of flowerbeds.
+					for control flowerbed lights, we need to approach different way. An idea is from sounds which will be playing together. A natural signal, "sound" is actually a form of composition of pure sine waves. I made two sine waves, with difference between temperature, humidity, precipitaion of Seoul and Pyeongchang, as a parameter of frequency, phase, amplitude. and synthesis these two sine waves. synthesis wave sampled by number of flowerbeds finally it can be transfomed to brightness of each group of flowerbeds.
 					</span>
 					<div class="descImageContainer" style="height:480px"><img src="./data/images/flowerBed.png" style="width:100%;"></div>
 					
 
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					<span class="wrappingKR">
 					작업은 <a href="http://openframeworks.cc" target="blank">오픈프레임웍스</a>로 구현되었다.<br/>
 					웹사이트 상단의 프로그램은 <a href="http://p5js.org">p5js</a>로 구현되었으며, 오픈프레임웍스의 코드가 포팅되었다.<br/>
@@ -149,7 +149,7 @@
 					Central to the “Gliding Sounds” aspect of this project was bridging Pyeongchang with Seoul. In order to accomplish this, realtime weather data from the central site of the Pyeongchang Olympics and Seoullo 7017 was transformed to gradually transforming music over the course of the installation’s lifetime between November 2017 and Feburary 2018. The main software being used to accomplish this was a combination of Open-Source graphic sequencer software Iannix, a custom-made patch created in Max/MSP, API weather data received through a standalone application created by Donghoon Yi, and a generative music arrangement created in Ableton Live. By sharing the same realtime API weather data the light and sound of the work synchronize together.
 					</span>
 
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					<span class="wrappingKR">
 					서울로7017의 지도와 서울과 평창 사이의 지형도를 이용하여 만든 도형악보를 만들었다. 이 도형악보는 이아닉스라는 프로그램을 통해 연주된다. 실시간 날씨 데이터에 받는 온도, 풍속, 풍향 등의 정보는 이 작업을 위해 개발된 Max/MSP 패치를 통해 소리의 정보로 변환된다. 결국, 실시간 날씨 데이터를 통해 소리의 속도, 연주되는 악기 등이 달라진다. 빛과 소리는 같은 실시간 날씨 데이터를 사용함으로써 서로 싱크 시켰다.
 					</span>
@@ -163,7 +163,7 @@
 					
 					</span>
 
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					<span class="wrappingKR">
 					미끄러지는 소리의 멜로디는 동계올림픽 종목의 특징들에서 영감을 받아서 만들었다. 눈, 얼음판 위에서 미끄러지기, 커브, 빙글빙글 돌기, 내려가서 올라가기 등의 움직임은 악기 소리, 멜로디 구성, 아르페지에터 스타일, 플레이트 리버브 등으로 변화시켰다. 모든 멜로디의 소리는 아날로그 신디사이저를 사용하여 만들었다.
 					</span>
@@ -174,9 +174,11 @@
 					<div class="descImageContainer"><img src="./data/images/Olympic-movements_soundideas.png" style="width:100%;"></div>
 
 					<span class="wrappingEN">
-					<div style="height:400px;"></div>
+					<div id="margin"></div>
 					The weather data affected the speed and number of sounds being played. Factors such as temperature, wind speed, wind direction, and precipitation (such as rain or snow) all impact the resulting sounds. These weather changes are translated into commands on the computer using the Max/MSP patch I developed.
 					</span>
+
+					
 
 				</div>
 
