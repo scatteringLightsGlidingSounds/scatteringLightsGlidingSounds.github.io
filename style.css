@@ -240,15 +240,15 @@ a{
     height:700px;
 }
 
-#youtubeWrapper{
+#youtubeWrapper1{
     position:relative;
-    padding-bottom:47.25%;
+    padding-bottom:55.25%;
     padding-top:25px;
     height:0;
     margin-top:30px;
 }
 
-#youtubeWrapper iframe{
+#youtubeWrapper1 iframe{
     position:absolute;
     top:0;
     left:0;
@@ -256,15 +256,15 @@ a{
     height:100%;
 }
 
-#vimeoWrapper{
+#youtubeWrapper2{
     position:relative;
-    padding-bottom:57.25%;
+    padding-bottom:47.25%;
     padding-top:25px;
     height:0;
     margin-top:30px;
 }
 
-#vimeoWrapper iframe{
+#youtubeWrapper2 iframe{
     position:absolute;
     top:0;
     left:0;
