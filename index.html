@@ -31,9 +31,12 @@
 					$(".wrappingEN").show();
 					$(".wrappingKR").hide();
 				});
+
+				$("#topHeaderLeft").click(function(){
+					$(window).scrollTop(0);
+				});
 			}); 
 
-			
 			$(window).on('scroll', function(){
 				if ($(this).scrollTop()>840)  {
 					$('#topHeaderArea').show();
