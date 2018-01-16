@@ -173,6 +173,7 @@ a{
     z-index:10;
     font-size:30px;
     margin-top:10px;
+    display:none;
 }
 
 #topHeaderLeft{
@@ -186,7 +187,7 @@ a{
 }
 
 #topHeaderLeft:hover{
-    background:#333;
+    background:#222;
     cursor:pointer;
 }
 
@@ -199,7 +200,7 @@ a{
 
 #topHeaderRight li{
     background:#000;
-    margin:0 5px;
+    margin-left:5px;
     padding:0 20px;
     line-height:88px;
     display:inline-block;

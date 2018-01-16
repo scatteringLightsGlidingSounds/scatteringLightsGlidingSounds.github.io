@@ -31,13 +31,20 @@
 					$(".wrappingEN").show();
 					$(".wrappingKR").hide();
 				});
-				
 			}); 
+
+			$(window).on('scroll', function(){
+				if ($(this).scrollTop()>840)  {
+					$('#topHeaderArea').show();
+				} else {
+					$('#topHeaderArea').hide();
+				}
+			});
 		</script>
 	</head>
 	<body>
 		<div id="langSelect" class="wrappingEN">
-			<a href="#" class="selectKR">한글</a>
+			<a href="#" class="selectKR">한국어</a>
 		</div>
 		<div id="langSelect" class="wrappingKR">
 			<a href="#" class="selectEN">ENGLISH</a>
@@ -63,7 +70,8 @@
 				by <a href="http://kimdaumm.tumblr.com//" target="blank">Kim Daum</a>, <a href="http://icq4ever.net/" target="blank">Yi Donghoon</a>, <a href="http://www.hasanhujairi.com/" target="blank">hasan hujairi</a>. 
 				</span></p>
 				<p><span class="wrappingEN">
-				<a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%EB%A1%9C7017/@37.5566149,126.9693894,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca2607008c5c3:0xa35240ec632d4307!8m2!3d37.5566149!4d126.9715781?hl=ko" target="blank">서울로7017</a> 에서 2018년 2월 28일까지 매일 오후 5:30부터 오후 11시 사이에 시연된다.
+				this project will be played from 17:30 to 21:00 everyday, until 28th, FEB, 2018, at 
+				<a href="https://www.google.co.kr/maps/place/%EC%84%9C%EC%9A%B8%EB%A1%9C7017/@37.5566149,126.9693894,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca2607008c5c3:0xa35240ec632d4307!8m2!3d37.5566149!4d126.9715781?hl=ko" target="blank">Seoullo 7017</a>.
 				</span></p>
 
 
@@ -86,7 +94,8 @@
 					</span>
 
 					<span class="wrappingEN">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					there are 111 number of pole lights and over 600 number of flowerbed lights. unlike pole lights, flowerpot lights cannot controllable because of huge number, instead, they can be conntrollable as a group with 3-7 number of lights. <br/><br/>
+					before programming, we need to find a way how can we overview of lighting animation working. so we have to get ID/position of each lightingfrom digital blueprint, and make json file, which can be readable for final application. everthing translated to vector and bitmap file, as a input of application. 
 					</span>
 
 					
@@ -98,7 +107,7 @@
 					폴 조명은 개별제어가 가능하다. 평창에서의 바람에 흩날리는 가상의 씨앗들이 날아다니다 조명들을 건들었을 때, 각 폴들이 반짝이는 상상을 해보았다. 평창 날씨정보에서 얻어온 풍향을 기준으로, 2D Perlin 노이즈 알고리즘을 적용해, 실제와 흡사하게 미세한 풍향의 변화를 시뮬레이션하고, 풍속에 따라 날아다니는 파티클을 구현했다. 각 파티클들이 폴조명에 닿으면, 조명이 반짝이도록 프로그래밍했다.
 					</span>
 					<span class="wrappingEN">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					unlike flowerbed lights, pole lights can be controllable individually. what if virtual seeds are floating by wind and touching pole lights, and making glowing?! I can get Pyeongchang weather from weather API. based on that information, I can make kinda virtual windfield with 2D perlin noise algorithm. so finally, I implement floating particle by wind direction and wind speed from realtime weather information. each of pole lights touched by these particle, it staring glowing.
 					</span>
 					<div class="descImageContainer" style="height:840px;"><img src="./data/images/windField.png" style="width:100%;"></div>
 					
@@ -109,7 +118,7 @@
 					화분조명의 제어를 위해서는 다른식의 접근방법을 고민해야 했는데, 함께 플레이되는 사운드 미디어에서 아이디어를 얻어왔다. 자연적인 신호, 특히 소리라는 것은 결국 순수한 사인파형이 합성된 신호이다. 이에 착안하여, 서울과 평창 두 위치에서 수집되는 온도 및 습도, 강수량등의 정보를 사인파형을 구성하는 주파수, 위상, 크기등의 파라메터로 대입하여, 두개의 사인파를 만든다음, 이를 합성하여 시시각각 변하는 연속적인 일종의 wave파형을 만들어내었다. 이 wave파형은 화분조명그룹의 갯수에 따라 고르게 간격을 유지하고, 이를 기반으로 샘플링되어, 최종적으로는 각 그룹의 밝기로 변환된다.
 					</span>
 					<span class="wrappingEN">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					for controle flowerbed lights, we need to approach different way. An idea is from sounds which will be playing together. A natural signal, "sound" is actually a form of composition of pure sine waves. I made two sine waves, with difference between temperature, humidity, precipitaion of Seoul and Pyeongchang, as a parameter of frequency, phase, amplitude. and synthesis these two sine waves. synthesis wave sampled by number of flowerbeds finally it can be transfomed to brightness of each group of flowerbeds.
 					</span>
 					<div class="descImageContainer" style="height:480px"><img src="./data/images/flowerBed.png" style="width:100%;"></div>
 					
