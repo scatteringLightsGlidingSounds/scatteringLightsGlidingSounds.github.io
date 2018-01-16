@@ -20,7 +20,7 @@
 		<script src="./customClasses/OscilMonitor.js"></script>  <!-- particle -->
 		<script src="sketch.js"></script>
 
-		<script type="text/javascript"> 
+		<script type="text/javascript"> 			
 			$(document).ready(function(){ 
 				$(".selectKR").click(function(){
 					$(".wrappingEN").hide();
@@ -92,6 +92,9 @@
 				<div id="scatteringLight">
 					<a id="scatteringLights"><div style="height:400px; display:block;"></div></a>
 					<div id="header_inner">SCATTERING LIGHTS</div>
+					<div class="vimeoWrapper">
+						<iframe src="https://player.vimeo.com/video/251140730" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
 					<span class="wrappingKR">
 					서울로에는 111개의 기둥조명과 600여개가 넘는 화분조명이 있다. 이들 중, 폴 조명과 다르게 화분조명의 경우 갯수가 많아 아쉽게도 개별제어가 불가능했다. 대신에 3개에서 많게는 7개정도씩 묶어서 그룹별로 제어가 가능했다.<br/><br/>
 					본격적인 작업에 앞서, 조명이 동작할 때, 어떠한 패턴으로 제어를 할것인지를 큰 틀에서 모니터링 할 수 있어야 했다. 이를 위해, 서울로의 전체 조명의 위치를 가늠할 수 있는 방법을 고민해야 했는데, 서울로의 도면에서 각 조명의 아이디와, 위치를 2차원 평면에 매핑하고, 이것들을 프로그램에서 불러올 수 있는 json 파일의 형태로 정리하여 연동되도록 하였다. 서울로의 고가는 그 모양을 벡터파일로 다듬어 추출한 뒤 이미지파일로 변환하여 사용할 수 있게 하였다.
@@ -162,8 +165,8 @@
 					The weather data affected the speed and number of sounds being played. Factors such as temperature, wind speed, wind direction, and precipitation (such as rain or snow) all impact the resulting sounds. These weather changes are translated into commands on the computer using the Max/MSP patch I developed.
 					</span>
 
-					<div class="videoWrapper">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/U1uzp5zOdLc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div id="youtubeWrapper">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/U1uzp5zOdLc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</div>
 					<!-- <div class="descImageContainer">
 						<img src="./data/images/ianixx_screenshot.png" style="width:100%;">	</div>  -->
@@ -185,13 +188,8 @@
 					<div id="margin"></div>
 					The weather data affected the speed and number of sounds being played. Factors such as temperature, wind speed, wind direction, and precipitation (such as rain or snow) all impact the resulting sounds. These weather changes are translated into commands on the computer using the Max/MSP patch I developed.
 					</span>
-
-					
-
 				</div>
-
 			</div>
-
 		</div>
 	</body>
 </html>
