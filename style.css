@@ -35,7 +35,7 @@ a{
     color: #FFF;
     background:rgba(0, 0, 0, 0.75);
     z-index: 99;
-    padding: 30px;
+    padding: 30px 25px;
 }
 
 .langSelect .wrappingEN{
