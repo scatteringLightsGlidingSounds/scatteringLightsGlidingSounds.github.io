@@ -81,7 +81,7 @@ a{
     }
 
     #topHeaderRight li{
-        background:#000;
+        background:rgba(0, 0, 0, 0.75);
         padding:0 20px;
         font-size:24px;
         line-height:88px;
