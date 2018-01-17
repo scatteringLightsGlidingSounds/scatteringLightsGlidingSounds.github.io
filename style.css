@@ -33,7 +33,7 @@ a{
     top:10px;
     font-size: 24px;
     color: #FFF;
-    background: #000;
+    background:rgba(0, 0, 0, 0.75);
     z-index: 99;
     padding: 30px;
 }
@@ -59,7 +59,7 @@ a{
 }
 
     #topHeaderLeft{
-        background:#000;
+        background:rgba(0, 0, 0, 0.75);
         display:block;
         letter-spacing:-0.1em;
         float:left;
