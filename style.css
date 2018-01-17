@@ -33,9 +33,9 @@ a{
     top:10px;
     font-size: 24px;
     color: #FFF;
-    background:rgba(0, 0, 0, 0.75);
+    background:rgba(0, 0, 0, 0.8);
     z-index: 99;
-    padding: 30px 25px;
+    padding: 17px 25px;
 }
 
 .langSelect .wrappingEN{
@@ -59,7 +59,7 @@ a{
 }
 
     #topHeaderLeft{
-        background:rgba(0, 0, 0, 0.75);
+        background:rgba(0, 0, 0, 0.8);
         display:block;
         letter-spacing:-0.1em;
         float:left;
@@ -81,10 +81,10 @@ a{
     }
 
     #topHeaderRight li{
-        background:rgba(0, 0, 0, 0.75);
-        padding:0 20px;
+        background:rgba(0, 0, 0, 0.8);
+        padding:8px 20px;
         font-size:24px;
-        line-height:88px;
+        line-height:44px;
         display:inline-block;
         list-style-type: none;   
     }
