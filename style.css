@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+ 	
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:200,300');
 
 @font-face {
@@ -144,7 +145,7 @@ a{
     letter-spacing:-0.1em;
     font-size: 40px;
     display:inline-block;
-    font-family:'Noto Sans', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     background:#000;
 }
 #articleHeader{
@@ -160,7 +161,7 @@ a{
 }
 
  #articleBodyHalf{
-    font-family:'Noto Sans', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     position: absolute;
     margin-top: -100px;
     /*display: block;*/
@@ -180,7 +181,7 @@ a{
 }
 
 #articleBodyFull{
-    font-family:'Noto Sans', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     position: absolute;
     margin-top: -100px;
     /*display: block;*/
